@@ -1,0 +1,563 @@
+html{
+	height: 100%;
+}
+body{
+    font-family: arial; margin: 0; background: black; height: 100%;
+ overflow-x: hidden;
+ animation-name: fade;
+ animation-duration: 2s; 
+}
+
+@keyframes fade{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+
+#continue{
+	position: absolute;
+	top: 63%;
+	left: 46%; 
+}
+
+#continue h2 a{
+	text-decoration: none;
+	padding: 1vw;
+	outline: none;
+	animation-name: con;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+#continue:hover{
+	background-color: orange;	
+}
+
+@keyframes con{
+	0%{color: black;}
+	40%{color: black;}
+	80%{color: black;}
+	100%{color: white;}	
+}
+
+#overlay{
+	width: 100%;
+	height: 100%;
+	background-color: black; 	
+	z-index: 0;
+}
+
+ #spinner1 {
+    border: 1vw solid black;
+    border-top: 1.2vw solid orange;
+    border-radius: 50%;
+    width: 6vw;
+    height: 6vw;
+    animation: spin 1.5s linear infinite;
+    position: absolute;    
+    height: 6.5vw;
+    top: 40%;
+    left: 45%;
+    z-index: 999;
+}
+
+#spinner2 {
+    border: 1vw solid black;
+    border-bottom: 1.2vw solid white;
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    animation: spin 1.5s linear infinite;
+    position: absolute;
+    top:43%;
+    left: 46%;
+    z-index: 999;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#nav{
+	width: 80%;
+	background-color: black;
+	position: fixed;
+	top: 4%;
+	height: 10%;
+	left: 10%;
+	display: inline-block;
+	z-index: 1;
+	animation-name: navap;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes navap{
+	0%{display: inline-block;}
+	50%{display: inline-block;opacity: 0.2}
+	100%{display: inline-block; opacity: 0.8}
+}
+
+#nav ul{
+	position: absolute;
+	left: 1%;
+	top: 20%;	
+}
+#nav ul li{
+	display: inline;
+	color: white;
+	font-size: 1.5vw;
+	width: auto;
+	padding: 0.5vw;
+	margin-right: 1.4vw;
+	font-weight: bold;
+	transition: background-color 1s;
+}
+#nav ul li:hover{
+	background-color: grey;
+}
+#nav ul li a{
+	text-decoration: none;
+	color: white;
+	outline: none;
+}
+
+#nav1{
+	position: absolute;
+	top: 75%;
+}
+#nav2{
+	position: absolute;
+	top: 175%;
+}
+
+#nav3{
+	position: absolute;
+	top: 290%;
+}
+img {
+	width: 100%;
+}
+#logo{
+	width: 10%;
+	position: absolute;
+	left: 45%;
+	top: 30%;	
+	animation-name: logoa;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+#logo img{
+	width: 100%;
+	border-radius: 8vw;
+}
+
+@keyframes logoa{
+	0%{position: absolute;left: 0%;}
+	50%{position: absolute;left: 25%;}
+	100%{position: absolute;left: 44.5%;}
+}
+
+
+#intro{	
+		position: absolute;
+		top: 50%;	
+		width: 100%;
+		background-color: black;
+	}
+
+#under{
+	content: "";
+	height: 0.3vw;
+	width: 7vw;
+	background-color: white;
+	position: absolute;
+	left: 46%;
+	top: 54%;
+}
+@keyframes introa{
+	0%{color: black;}
+	100%{color: white;}
+}
+
+#hh1, #hh2{
+		color: black;
+		font-family: sans-serif;
+		text-align: center;
+		animation-name: introa;
+		animation-duration: 1s;
+		animation-delay: 1.5s;
+		animation-fill-mode: forwards;
+	}
+		h1{
+			color: white;
+			font-size: 3vw;
+		}
+		h2 {
+			color: white;
+			font-size: 1.6vw;
+		}
+	.head{
+		color: white;
+		text-align: center;
+		width: 106%;
+	}
+
+p.ame {
+	position: absolute;
+	padding: 0.0vw;
+	text-align: center;
+	color: white;
+	font-size: 1.6vw;
+	width: auto;
+	background-color: black;
+	height: auto;
+	left: 15%;
+}
+#brief{
+	position: absolute;
+	top: 100%;
+	height : 34vw;
+	width: 80%;
+	right: 0%;
+	padding: 0;
+}	
+
+#hov{
+	width: 6%;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	background-color: black;
+	height: 10%;
+	transition: background-color 1s;
+}
+
+#hov h3{
+	color: white;
+	position: absolute;
+	left: 18%;
+	opacity: 0.5;
+}
+
+#hov:hover{
+	background-color: grey;
+}
+
+#brief h1{
+		color: white;
+		font-family: sans-serif;
+		text-align: center;
+}
+
+	#brief ul{
+		position: absolute;
+			top: 55%;
+			left: 35%;
+			width: 100%;
+			height: 1vw;
+	}
+		#brief ul li{
+			display: inline;
+			height: 1vw;
+			font-size: 1.4vw ;
+			color: white;
+		}
+		#athlete, #gamer, #dipsite, #sports, #quora{
+			width: auto;
+			position: absolute;
+			top: 30%;
+			left: -18%;
+			background-color: orange;
+			padding: 1.8vw;
+			margin: 1vw;
+			border-spacing: 1vw	;
+			transition: background-color 1s;
+		}
+		#gamer{
+			left: -3%;
+		}
+		#dipsite{
+			text-decoration: none;
+			color: white;
+			left: 41%;
+		}
+		#sports{
+			left: 11%;
+		}
+		#quora{
+			left:26%;
+			text-decoration: none;
+			color: white;
+		}
+
+		#gamer:hover, #athlete:hover, #dipsite:hover, #sports:hover, #quora:hover{
+			background-color: grey;
+		}
+		
+		#footer{
+			width: 100%;
+		}
+
+		#copyright{
+			height: 5vw;
+			width: 100%;
+			position: absolute;
+			top: 480%;
+			background-color: rgba(30, 28, 28, 0.9);
+			left: 0%;
+		}
+		#footer p{
+			color: white;
+			position: absolute;
+			top: 10%;
+			left: 40%;
+			font-size: 1vw;
+			text-align: center;
+		}
+
+	#athletee{
+		width: 15%;
+		display: none;
+	}
+	#athletee #run{
+		position: absolute;
+		top: 120%;
+		width: 15%;
+		left: 5%;
+	}
+	#athletee #swim{
+		position: absolute;
+		width: 10%;
+		top: 140%;
+		left: 8%;
+	}
+
+	#gamerr{
+		width: 30%;
+		position: absolute;
+		top: 110%;
+		display: none;
+		height: 50%;	
+	}
+	#gamerr #fifa{
+		position: absolute;
+		width: 40%;
+		left: 30%;
+		top: 60%;
+	}
+	#gamerr #go{	
+		position: absolute;
+		width: 40%;	
+		left: 30%;
+		top: 20%;
+	}
+
+	#sportss{
+		width: 30%;
+		position: absolute;
+		top: 110%;
+		height: 60%;
+		display: none;
+	}
+	#sportss #bask{
+		position: absolute;
+		width: 50%;
+		left: 20%;
+		top: 55%;
+	}
+	#sportss #foot{	
+		position: absolute;
+		width: 50%;	
+		left: 20%;
+		top: 5%;
+	}
+	#quoraa{
+		width: 30%;
+		position: absolute;
+		top: 110%;
+		height: 30%;
+		display: none;
+	}
+	#quoraa #quo{
+		position: absolute;
+		width: 30%;
+		left: 35%;
+		top: 35%;
+	}
+
+	#dipsitee{
+		width: 30%;
+		position: absolute;
+		top: 110%;
+		height: 50%;
+		display: none;		
+	}
+	#dipsitee #dps{
+		position: absolute;
+		width: 40%;
+		left: 35%;
+		top: 20%;
+	}
+
+	#achieve{
+		background-color: black;
+		height: 60%;
+		width: 100%;
+		position: absolute;
+		top: 200%;
+	}
+
+	#achieve h1{
+		color: white;
+		font-family: sans-serif;
+		text-align: center;
+}
+	#achieve table{
+		position: absolute;
+		left: 10%;
+	}
+
+	#achieve table tr td{
+		color: white;
+		font-size: 1.75vw;
+		padding: 1.5vw;
+	}
+
+	.date{
+		background-color: orange;
+		transition: background-color 1s;
+	}
+
+	.date:hover{
+		background-color: grey;
+	}
+
+	#connect{
+		background-color: black;
+		height: 40%;
+		position: absolute;
+		top: 425%;
+		width: 100%;
+	}
+
+	#connect div a{
+		outline: none;	
+	}
+
+	#connect h1{
+		color: white;
+		font-family: sans-serif;
+		text-align: center;
+	}
+	#fb{
+		width: 5%;
+		position: absolute;
+		top: 42%;
+		left: 26%;
+	}
+
+	#fb:hover{
+		transform: scale(1.2);
+		z-index: 10;
+	}
+
+	#mail{
+		width: 5%;
+		position: absolute;
+		top: 42%;
+		left: 38%;
+	}
+
+		#mail:hover{
+		transform: scale(1.2);
+		z-index: 10;
+	}
+
+	#insta{
+		width: 5%;
+		position: absolute;
+		top: 42%;
+		left: 50%;
+	}
+
+		#insta:hover{
+		transform: scale(1.2);
+		z-index: 10;
+	}
+
+	#twit{
+		width: 5%;
+		position: absolute;
+		top: 42%;
+		left: 62%;
+	}
+		#twit:hover{
+		transform: scale(1.2);
+		z-index: 10;
+	}
+
+	#gf{
+		width: 8%;
+		position: absolute;
+		top: 42%;
+		left: 70%;
+		background-color: black;
+		color: white;
+		height: auto;
+		font-size: 1vw;
+		transition: all 1s;
+	}
+		#gf:hover{
+			background-color: grey;
+			transform: scale(1.5);
+		}
+
+		#gf a{
+			text-decoration: none;
+			color: white;
+		}
+
+		#gf p{
+			margin: 1vw;
+		}
+	#life{
+		position: absolute;
+		top: 325%;
+		width: 100%;
+		background-color: black;
+		height: 40%;
+	}
+	#life h1{
+		color: white;
+		font-family: sans-serif;
+		text-align: center;
+	}
+
+	#life h2{
+		color: white;
+		font-size: 2.8vw;
+		width: 100%;
+		text-align: center;
+
+	}
+	#life p{
+		font-size: 1vw;
+		color: white;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 51%; 	
+		animation-name: pp;
+		animation-duration: 2s;
+		animation-fill-mode: forwards; 
+	}
+
+	@keyframes pp{
+		0%{color: black;}
+		50%{color: black;}
+		100%{color: white;}
+	}
