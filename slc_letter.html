@@ -80,7 +80,7 @@
 							<p>
 								The SLC or the Student Life Committee is the official body responsible for conducting all activities related to student life. All clubs and cultural events at IIIT-H come under this body. The SLC Chair is the head of this body. The position is currently held by Prof. Radhika Mamidi.
 							</p>
-							<a href="#" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
+							<a onclick = "smoothScroll(document.getElementById('shift'))" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
 						</div>
 					</div>
 				</div>
@@ -89,6 +89,7 @@
 			<!-- About Generic Start -->
 			<section class="about-generic-area">
 				<div class="container border-top-generic">
+					<div id="shift"></div>
 					<h3 class="about-title mb-70">Letter from SLC Chair</h3>
 					<div class="row">
 						<div class="col-md-12">
@@ -154,5 +155,29 @@
 		<script src="js/parallax.min.js"></script>
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+				window.smoothScroll = function(target) {
+				var scrollContainer = target;
+				do { //find scroll container
+					scrollContainer = scrollContainer.parentNode;
+					if (!scrollContainer) return;
+					scrollContainer.scrollTop += 1;
+				} while (scrollContainer.scrollTop == 0);
+	
+				var targetY = 0;
+				do { //find the top of target relatively to the container
+					if (target == scrollContainer) break;
+					targetY += target.offsetTop;
+				} while (target = target.offsetParent);
+	
+				scroll = function(c, a, b, i) {
+					i++; if (i > 30) return;
+					c.scrollTop = a + (b - a) /30 * i;
+					setTimeout(function(){ scroll(c, a, b, i); }, 10);
+				}
+				// start scrolling
+				scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+			}
+			</script>
 	</body>
 </html>
